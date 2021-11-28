@@ -22,19 +22,23 @@ const Row = styled.div`
   margin-bottom: 8px;
 `
 
+const CardImage = styled.img`
+  margin-bottom: 16px;
+`
+
 const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const farms = useFarms();
-  const eggPrice = usePriceCakeBusd();
-  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
-  const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = eggPrice.times(circSupply);
+  const farms = useFarms()
+  const eggPrice = usePriceCakeBusd()
+  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
+  const cakeSupply = getBalanceNumber(circSupply)
+  const marketCap = eggPrice.times(circSupply)
 
-  let eggPerBlock = 0;
-  if(farms && farms[0] && farms[0].eggPerBlock){
-    eggPerBlock = new BigNumber(farms[0].eggPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let eggPerBlock = 0
+  if (farms && farms[0] && farms[0].eggPerBlock) {
+    eggPerBlock = new BigNumber(farms[0].eggPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (
@@ -44,24 +48,26 @@ const CakeStats = () => {
           {TranslateString(534, 'Egg Stats')}
         </Heading>
         <Row>
-          <Text fontSize="14px">{TranslateString(10005, 'Market Cap')}</Text>
+          <Text fontSize="14px">Total value of Omicron (marketcap)</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(536, 'Total Minted')}</Text>
+          <Text fontSize="14px">Total number of Omicron (total supply)</Text>
           {totalSupply && <CardValue fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(538, 'Total Burned')}</Text>
+          <Text fontSize="14px">Number of deaths (burned)</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(10004, 'Circulating Supply')}</Text>
+          <Text fontSize="14px">Number of infected (circulating supply)</Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(540, 'New EGG/block')}</Text>
-          <Text bold fontSize="14px">{eggPerBlock}</Text>
+          <Text fontSize="14px">Contamination in progress (Omicron/block)</Text>
+          <Text bold fontSize="14px">
+            {eggPerBlock}
+          </Text>
         </Row>
       </CardBody>
     </StyledCakeStats>

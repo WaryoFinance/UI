@@ -8,14 +8,13 @@ import CardValue from './CardValue'
 
 const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
-  display: flex;
-  flex: 1;
+  text-align: center;
 `
 
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   // const data = useGetStats()
-  const totalValue = useTotalValue();
+  const totalValue = useTotalValue()
   // const tvl = totalValue.toFixed(2);
 
   return (
@@ -27,7 +26,7 @@ const TotalValueLockedCard = () => {
         <>
           {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
           {/* <Heading size="xl"> */}
-            <CardValue value={totalValue.toNumber()} prefix="$" decimals={2}/>
+          <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} />
           {/* </Heading> */}
           <Text color="textSubtle">{TranslateString(999, 'Across all Farms and Pools')}</Text>
         </>

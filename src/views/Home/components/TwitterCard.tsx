@@ -11,16 +11,13 @@ import CardValue from './CardValue'
 import { useFarms } from '../../../state/hooks'
 
 const StyledTwitterCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
+  text-align: center;
 `
 
 const Row = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: 14px;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  width: 1200px;
+  height: 300px;
 `
 
 const TwitterCard = () => {
@@ -30,19 +27,8 @@ const TwitterCard = () => {
     <StyledTwitterCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(10003, 'Announcements')}
+          Covid Map
         </Heading>
-        <Timeline
-          dataSource={{
-            sourceType: 'profile',
-            screenName: 'GooseFinance'
-          }}
-          options={{
-            height: '300',
-            chrome: "noheader, nofooter",
-            width: "400"
-          }}
-        />
       </CardBody>
     </StyledTwitterCard>
   )

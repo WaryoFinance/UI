@@ -12,23 +12,28 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.goosedefi.com/',
+        href: 'https://pancakeswap.finance/swap?outputCurrency=0x6C8d1e69971964395272194A460c3A0F8Aefd38a',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.goosedefi.com/#/pool',
+        href: 'https://pancakeswap.finance/add/BNB/0x6C8d1e69971964395272194A460c3A0F8Aefd38a',
       },
     ],
   },
   {
     label: 'Farms',
-    icon: 'FarmIcon',
+    icon: 'DoctorIcon',
     href: '/farms',
   },
   {
-    label: 'Nests',
-    icon: 'PoolIcon',
-    href: '/nests',
+    label: 'Pools',
+    icon: 'TestTubeIcon',
+    href: '/pools',
+  },
+  {
+    label: 'Vaults (COMING SOON)',
+    icon: 'VaultIcon',
+    href: '',
   },
   // {
   //   label: 'Pools',
@@ -50,20 +55,12 @@ const config: MenuEntry[] = [
     icon: 'InfoIcon',
     items: [
       {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6',
+        label: 'Pancakeswap',
+        href: 'https://pancakeswap.info/token/0x6C8d1e69971964395272194A460c3A0F8Aefd38a',
       },
       {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/goose-finance',
-      },
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/goose-finance/',
-      },
-      {
-        label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+        label: 'Bscscan',
+        href: 'https://www.bscscan.com/token/0x6C8d1e69971964395272194A460c3A0F8Aefd38a',
       },
     ],
   },
@@ -72,33 +69,10 @@ const config: MenuEntry[] = [
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Github',
-        href: 'https://github.com/goosedefi/',
-      },
-      {
-        label: 'Docs',
-        href: 'https://goosedefi.gitbook.io/goose-finance/',
-      },
-      {
-        label: 'Blog',
-        href: 'https://goosefinance.medium.com/',
+        label: 'Covid Stats',
+        href: 'https://www.worldometers.info/coronavirus/',
       },
     ],
-  },
-  {
-    label: 'Partnerships/IFO',
-    icon: 'GooseIcon',
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSe7ycrw8Dq4C5Vjc9WNlRtTxEhFDB1Ny6jlAByZ2Y6qBo7SKg/viewform?usp=sf_link',
-  },
-  {
-    label: 'Audit by Hacken',
-    icon: 'AuditIcon',
-    href: 'https://www.goosedefi.com/files/hackenAudit.pdf',
-  },
-  {
-    label: 'Audit by CertiK',
-    icon: 'AuditIcon',
-    href: 'https://certik.org/projects/goose-finance',
   },
 ]
 

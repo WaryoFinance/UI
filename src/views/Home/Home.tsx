@@ -11,7 +11,6 @@ import TwitterCard from './components/TwitterCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/egg/3.png');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -60,17 +59,16 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'Goose Finance')}
+          Omicron Finance
         </Heading>
-        <Text>{TranslateString(578, 'Top 3 best DEFI app on Binance Smart Chain.')}</Text>
+        <Text>The first Covid protocol on Binance Smart Chain.</Text>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
-          <TwitterCard/>
           <CakeStats />
-          <TotalValueLockedCard />
         </Cards>
+        <TotalValueLockedCard />
       </div>
     </Page>
   )
